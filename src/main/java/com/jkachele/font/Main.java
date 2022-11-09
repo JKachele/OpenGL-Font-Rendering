@@ -7,10 +7,11 @@
  ******************************************/
 package com.jkachele.font;
 
-import com.jkachele.font.fonts.GameFont;
+import com.jkachele.font.render.Engine;
 
 public class Main {
     public static void main(String[] args) {
-        GameFont font = new GameFont("assets/fonts/JetBrainsMono.ttf", 64);
+        Engine engine = new Engine(540, 960, "Font Rendering");
+        engine.start();
     }
 }
