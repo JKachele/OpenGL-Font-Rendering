@@ -34,10 +34,10 @@ public class Scene {
     static GameFont font;
 
     private static float[] vertexArray = {
-            -0.5f, -0.5f, 0.0f,           0.0f, 0.0f,     1.0f, 0.0f, 0.0f, 1.0f,     // 0: Bottom Left
-            -0.5f,  0.5f, 0.0f,           0.0f, 1.0f,     0.0f, 1.0f, 0.0f, 1.0f,     // 1: Top Left
-             0.5f,  0.5f, 0.0f,           1.0f, 1.0f,     0.0f, 0.0f, 1.0f, 1.0f,     // 2: Top Right
-             0.5f, -0.5f, 0.0f,           1.0f, 0.0f,     1.0f, 1.0f, 1.0f, 1.0f      // 3: Bottom Right
+            -0.5f, -0.5f, 0.0f,           0.0f, 1.0f,     1.0f, 0.0f, 0.0f, 1.0f,     // 0: Bottom Left
+            -0.5f,  0.5f, 0.0f,           0.0f, 0.0f,     0.0f, 1.0f, 0.0f, 1.0f,     // 1: Top Left
+             0.5f,  0.5f, 0.0f,           1.0f, 0.0f,     0.0f, 0.0f, 1.0f, 1.0f,     // 2: Top Right
+             0.5f, -0.5f, 0.0f,           1.0f, 1.0f,     1.0f, 1.0f, 1.0f, 1.0f      // 3: Bottom Right
     };
 
     private static int[] elementArray = {
@@ -46,7 +46,7 @@ public class Scene {
     };
 
     public static void init() {
-        font = new GameFont("assets/fonts/JetBrainsMono.ttf", 128);
+        font = new GameFont("assets/fonts/JetBrainsMono.ttf", 64);
         Vector2f[] uvCoords = font.getCharacter('B').texCoords;
         vertexArray[3]  = uvCoords[0].x;
         vertexArray[4]  = uvCoords[0].y;
